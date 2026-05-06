@@ -1,5 +1,9 @@
 # Filament Scrollable Top Navigation
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/emuniq/filament-scrollable-topnav.svg?style=flat-square)](https://packagist.org/packages/emuniq/filament-scrollable-topnav)
+[![Total Downloads](https://img.shields.io/packagist/dt/emuniq/filament-scrollable-topnav.svg?style=flat-square)](https://packagist.org/packages/emuniq/filament-scrollable-topnav)
+[![License](https://img.shields.io/packagist/l/emuniq/filament-scrollable-topnav.svg?style=flat-square)](LICENSE)
+
 A Filament v3 & v4 plugin that turns the top navigation into a single scrollable row instead of letting it wrap into multiple rows when you have many navigation groups or clusters. Adds horizontal mouse-wheel scrolling and an edge-fade affordance so users can tell there's more to see.
 
 ## Demo
