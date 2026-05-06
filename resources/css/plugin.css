@@ -1,0 +1,56 @@
+/* Filament Scrollable Top Navigation Plugin Styles */
+
+.fi-topbar .fi-topbar-item-label,
+.fi-topbar .fi-topbar-item-btn,
+.fi-topbar .fi-dropdown-list-item-label,
+.fi-topbar-nav-groups .fi-topbar-item,
+.fi-topbar-nav-groups .fi-topbar-item-btn,
+.fi-topbar-nav-groups .fi-topbar-item-label {
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    flex-shrink: 0 !important;
+}
+
+@media (min-width: 1024px) {
+    .fi-topbar-ctn {
+        overflow-x: auto !important;
+        overflow-x: clip !important;
+    }
+
+    .fi-topbar-nav-groups {
+        --scrollable-topnav-fade: 36px;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        overscroll-behavior-x: contain;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .fi-topbar-nav-groups::-webkit-scrollbar {
+        display: none;
+    }
+
+    .fi-topbar-nav-groups[data-can-scroll-right="1"] {
+        -webkit-mask-image: linear-gradient(to right, black calc(100% - var(--scrollable-topnav-fade)), transparent 100%);
+                mask-image: linear-gradient(to right, black calc(100% - var(--scrollable-topnav-fade)), transparent 100%);
+    }
+
+    .fi-topbar-nav-groups[data-can-scroll-left="1"] {
+        -webkit-mask-image: linear-gradient(to right, transparent 0, black var(--scrollable-topnav-fade));
+                mask-image: linear-gradient(to right, transparent 0, black var(--scrollable-topnav-fade));
+    }
+
+    .fi-topbar-nav-groups[data-can-scroll-left="1"][data-can-scroll-right="1"] {
+        -webkit-mask-image: linear-gradient(to right, transparent 0, black var(--scrollable-topnav-fade), black calc(100% - var(--scrollable-topnav-fade)), transparent 100%);
+                mask-image: linear-gradient(to right, transparent 0, black var(--scrollable-topnav-fade), black calc(100% - var(--scrollable-topnav-fade)), transparent 100%);
+    }
+
+    .fi-topbar-nav-groups[data-scroll-snap="1"] {
+        scroll-snap-type: x proximity;
+    }
+
+    .fi-topbar-nav-groups[data-scroll-snap="1"] > * {
+        scroll-snap-align: start;
+        scroll-margin-inline: var(--scrollable-topnav-fade);
+    }
+}
